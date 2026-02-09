@@ -1,1 +1,109 @@
-# Valentino
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Vally</title>
+    </head>
+    <body>
+
+        <div class="background">
+
+            <img src="./val-image.webp">
+            
+            <p class="text">Dear Titilayo, Will you be my Val?</p>
+
+            <button class="yes js-yes" onclick="
+            clickYes()
+            ">YES</button>
+            <button class="no js-no" onclick="
+            clickNo()
+            ">NO</button>
+
+            <p class="js-display-text"></p>
+        </div>
+
+
+    <style>
+        body {
+            margin: 0;
+            display: flex;
+            justify-content: center; /* Horizontal center */
+            align-items: center;     /* Vertical center */
+            height: 100vh;           /* Full screen height */
+        }
+
+        .background {
+            width: 300px;
+            height: 200px;
+            text-align: center;
+            background-color: antiquewhite;
+            width: 60%;
+            height: 60vh;
+            box-shadow: 0 0 20px rgba(17, 10, 10, 0.7);;
+        }
+
+        .text {
+            font-family: Georgia, 'Times New Roman', Times, serif;
+            font-size: 22px;
+            color: rgb(157, 139, 4);
+        }
+
+        .textt {
+            font-family: Georgia, 'Times New Roman', Times, serif;
+            font-size: 17px;
+        }
+
+        img {
+            height: 40%;
+            padding-top: 60px;
+        }
+
+        .yes{
+            font-family: Georgia, 'Times New Roman', Times, serif;
+            font-weight: 600;
+            background-color: rgb(44, 238, 44);
+            height: 30px;
+            width: 100px;
+            border-radius: 20px;
+        }
+
+        .newyes{
+            font-family: Georgia, 'Times New Roman', Times, serif;
+            font-weight: 600;
+            background-color: rgb(44, 238, 44);
+            height: 50px;
+            width: 200px;
+            border-radius: 20px;
+        }
+
+        .no{
+            background-color: rgb(244, 51, 54);
+            height: 30px;
+            width: 100px;
+            border-radius: 20px; 
+        }
+
+    </style>
+
+    <script>
+        let yesBut = document.querySelector('.js-yes');
+        let noBut = document.querySelector('.js-no');
+
+        function clickYes() {
+            yesBut.innerHTML = '🎉 CONGRATULATIONS!!!'
+            const message = document.querySelector('.js-display-text')
+            message.innerText = "Good choice!, if you hadn't picked yes, you for collect😂😂"
+            noBut.remove();
+            message.classList.add('textt');
+            yesBut.classList.add('newyes') 
+            
+        }
+
+        function clickNo() {
+            document.querySelector('.js-display-text')
+            .innerText = 'You no wan be my Val ke, Oga go back and pick YES now!!!!';
+            noBut.remove();
+        }
+    </script>
+
+    </body> 
+</html>
